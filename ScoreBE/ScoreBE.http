@@ -1,0 +1,6 @@
+@ScoreBE_HostAddress = http://localhost:5070
+
+GET {{ScoreBE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
