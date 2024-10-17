@@ -1,7 +1,8 @@
-public class FixturesBetweenDatesDTO {
-    public int LeagueId { get; set; }
-    public string Name { get; set; }
-    public string StartingAt { get; set; }
+public class FixturesBetweenDatesDTO
+{
+    public int? LeagueId { get; set; }
+    public string? Name { get; set; }
+    public string? StartingAt { get; set; }
 }
 
 /*

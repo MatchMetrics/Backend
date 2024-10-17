@@ -1,11 +1,12 @@
-public class AllPlayersDTO{
-    public string Name { get; set; }
-    public string DisplayName { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public int Height { get; set; }
-    public int Weight { get; set; }
-    public string DateOfBirth { get; set; }
+public class AllPlayersDTO
+{
+    public string? Name { get; set; }
+    public string? DisplayName { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public int? Height { get; set; }
+    public int? Weight { get; set; }
+    public string? DateOfBirth { get; set; }
 
 }
 
