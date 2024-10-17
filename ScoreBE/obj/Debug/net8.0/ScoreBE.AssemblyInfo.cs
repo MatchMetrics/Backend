@@ -13,7 +13,15 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScoreBE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
+<<<<<<<< HEAD:ScoreBE/obj/Debug/net8.0/ScoreBE.AssemblyInfo.cs
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bda2a3bd7edb739bdc949bd3925602f182e8387")]
+========
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b28e7b3d7c88b5be5847ff45af28e4580e3951d0")]
+>>>>>>>> 30508715b38de239a0e420739a0c601d99e6aae4:ScoreBE/obj/Debug/net9.0/ScoreBE.AssemblyInfo.cs
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ece5d15974adf142afbff9b1aa4d3b52e58a3619")]
+>>>>>>> 30508715b38de239a0e420739a0c601d99e6aae4
 [assembly: System.Reflection.AssemblyProductAttribute("ScoreBE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScoreBE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

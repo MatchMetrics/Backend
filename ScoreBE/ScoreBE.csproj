@@ -1,13 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
+=======
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0-rc.2.24474.3" />
+>>>>>>> 30508715b38de239a0e420739a0c601d99e6aae4
   </ItemGroup>
 
 </Project>
