@@ -6,19 +6,13 @@
   "expectedPackageFiles": [
     "C:\\Users\\pompe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\pompe\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
-    "C:\\Users\\pompe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
-    "C:\\Users\\pompe\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
   ],
   "logs": [
     {
-      "code": "NU1603",
+      "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "ScoreBE depends on Microsoft.AspNetCore.OpenApi (>= 8.0.0-rc.2.24474.3) but Microsoft.AspNetCore.OpenApi 8.0.0-rc.2.24474.3 was not found. Microsoft.AspNetCore.OpenApi 8.0.0 was resolved instead.",
-      "libraryId": "Microsoft.AspNetCore.OpenApi",
-      "targetGraphs": [
-        "net8.0"
-      ]
+      "message": "Problem reading the cache file C:\\MatchMetrics\\backend\\ScoreBE\\obj\\project.nuget.cache : After parsing a value an unexpected character was encountered: \". Path 'expectedPackageFiles[1]', line 9, position 4."
     }
   ]
 }
