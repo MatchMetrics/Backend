@@ -1,0 +1,8 @@
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.csproj.AssemblyReference.cache
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.GeneratedMSBuildEditorConfig.editorconfig
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.AssemblyInfoInputs.cache
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.AssemblyInfo.cs
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.csproj.CoreCompileInputs.cache
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.MvcApplicationPartsAssemblyInfo.cs
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.MvcApplicationPartsAssemblyInfo.cache
+c:\MatchMetrics\backend\ScoreBE\obj\Debug\net8.0\ScoreBE.sourcelink.json
