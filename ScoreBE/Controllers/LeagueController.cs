@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 [ApiController]
 [Route("placeholder")]
 public class LeagueController : ControllerBase
-{
+{/* 
     private readonly LeagueService _leagueService;
 
     public LeagueController(LeagueService leagueService)
@@ -17,5 +17,5 @@ public class LeagueController : ControllerBase
     {
         var leagues = await _leagueService.GetAllLeagues();
         return Ok(leagues);
-    }
+    } */
 }

@@ -1,9 +1,9 @@
 public class FixturesByDateDTO
 {
-    public string Name { get; set; }
-    public string League { get; set; }
-    public string StartingAt { get; set; }
-    public string ResultInfo { get; set; }
+    public string? Name { get; set; }
+    public string? League { get; set; }
+    public string? StartingAt { get; set; }
+    public string? ResultInfo { get; set; }
 
 }
 

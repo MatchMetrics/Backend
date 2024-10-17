@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 
 public class LeagueService
 {
-    private readonly HttpClient _httpClient;
+   /*  private readonly HttpClient _httpClient;
     private readonly ApiSettings _apiSettings;
 
     public LeagueService(HttpClient httpClient, IOptions<ApiSettings> apiSettings)
@@ -39,6 +39,6 @@ public class LeagueService
         }
 
         throw new HttpRequestException("Error fetching leagues from API");
-    }
+    } */
 }
 
