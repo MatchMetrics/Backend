@@ -1,4 +1,5 @@
-public class AllPlayersDTO{
+public class AllPlayersDTO
+{
     public string Name { get; set; }
     public string DisplayName { get; set; }
     public string FirstName { get; set; }

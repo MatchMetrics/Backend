@@ -1,4 +1,5 @@
-public class AllLeaguesDTO{
+public class AllLeaguesDTO
+{
     public string Name { get; set; }
     public string ShortCode { get; set; }
     public string ImagePath { get; set; }
