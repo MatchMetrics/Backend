@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "qnnrMxWZf9w=",
-  "success": false,
+  "dgSpecHash": "Oz0xYojf6sE=",
+  "success": true,
   "projectFilePath": "C:\\MatchMetrics\\backend\\ScoreBE\\ScoreBE.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pompe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0-rc.2.24474.3\\microsoft.aspnetcore.openapi.9.0.0-rc.2.24474.3.nupkg.sha512"
+    "C:\\Users\\pompe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
+    "C:\\Users\\pompe\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
   ],
   "logs": [
     {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNetCore.OpenApi 9.0.0-rc.2.24474.3 is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Package Microsoft.AspNetCore.OpenApi 9.0.0-rc.2.24474.3 supports: net9.0 (.NETCoreApp,Version=v9.0)",
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "ScoreBE depends on Microsoft.AspNetCore.OpenApi (>= 8.0.0-rc.2.24474.3) but Microsoft.AspNetCore.OpenApi 8.0.0-rc.2.24474.3 was not found. Microsoft.AspNetCore.OpenApi 8.0.0 was resolved instead.",
       "libraryId": "Microsoft.AspNetCore.OpenApi",
       "targetGraphs": [
         "net8.0"

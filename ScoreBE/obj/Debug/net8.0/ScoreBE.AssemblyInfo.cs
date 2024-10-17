@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScoreBE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+106ad6f2c5ef725b62470be7131e0bebaa928837")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ece5d15974adf142afbff9b1aa4d3b52e58a3619")]
 [assembly: System.Reflection.AssemblyProductAttribute("ScoreBE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScoreBE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
