@@ -1,22 +1,31 @@
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddEndpointsApiExplorer(); // Required for endpoint discovery
-builder.Services.AddSwaggerGen(); // Register the Swagger generator
+builder.Services.AddHttpClient<LeagueService>();
 
+// Add services to the container.
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
+
+// Configure ApiSettings from appsettings.json
 builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"));
 
 var app = builder.Build();
 
+app.MapControllers();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger(); // Enable middleware to serve generated Swagger as a JSON endpoint
-    app.UseSwaggerUI(); // Enable middleware to serve Swagger UI
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
+// Weather forecast endpoint
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -35,6 +44,20 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+// Endpoint that uses ApiSettings
+app.MapGet("/livescores", (IOptions<ApiSettings> apiSettings) =>
+{
+    var apiKey = apiSettings.Value.ApiKey;
+    var baseUrl = apiSettings.Value.BaseUrl;
+
+    return Results.Ok(new
+    {
+        Message = "Calling external API (Sportmonks)",
+        ApiUrl = $"{baseUrl}/live-scores?leagues&apiKey={apiKey}"
+    });
+})
+.WithName("GetLiveScores");
 
 app.Run();
 

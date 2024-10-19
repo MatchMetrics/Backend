@@ -1,44 +1,43 @@
-using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Json;
 using Microsoft.Extensions.Options;
 
 public class LeagueService
 {
-    /*  private readonly HttpClient _httpClient;
-     private readonly ApiSettings _apiSettings;
+    private readonly HttpClient _httpClient;
+    private readonly ApiSettings _apiSettings;
 
-     public LeagueService(HttpClient httpClient, IOptions<ApiSettings> apiSettings)
-     {
-         _httpClient = httpClient;
-         _apiSettings = apiSettings.Value; // ApiSettings from appsettings.json
-     }
+    public LeagueService(HttpClient httpClient, IOptions<ApiSettings> apiSettings)
+    {
+        _httpClient = httpClient;
+        _apiSettings = apiSettings.Value; // ApiSettings from appsettings.json
+    }
 
-     // fetch all leagues and return them as LeagueDTOs
-     public async Task<List<LeagueDTO>> GetAllLeagues()
-     {
-         // Set up the full URL, including the API key as a query parameter (depends on API requirements)
-         var requestUrl = $"{_apiSettings.BaseUrl}/leagues?apiKey={_apiSettings.ApiKey}";
+    // Fetch all leagues and return them as LeagueDTOs
+    public async Task<List<LeagueDTO>> GetAllLeagues()
+    {
+        var requestUrl = $"{_apiSettings.BaseUrl}/leagues?apiKey={_apiSettings.ApiKey}";
 
-         // GET request to the external API
-         var response = await _httpClient.GetAsync(requestUrl);
+        var response = await _httpClient.GetAsync(requestUrl);
+        if (response.IsSuccessStatusCode)
+        {
+            // Deserialize the JSON response into a wrapper object that includes "data"
+            var responseData = await response.Content.ReadFromJsonAsync<ApiResponse<List<LeagueDTO>>>();
 
-         if (response.IsSuccessStatusCode)
-         {
-             // Deserialize the JSON response into a list of League models
-             var leagues = await response.Content.ReadFromJsonAsync<List<LeagueDTO>>();
+            // Map only the Id and Name from the API response
+            return responseData?.Data.Select(league => new LeagueDTO
+            {
+                Id = league.Id,
+                Name = league.Name
+            }).ToList() ?? new List<LeagueDTO>();
+        }
 
-             // Map the League models to LeagueDTOs
-             var leagueDTOs = leagues.Select(league => new LeagueDTO
-             {
-                 Id = league.Id,
-                 Name = league.Name,
-                 // Country = league.Country,
-                 // LogoUrl = league.LogoUrl
-             }).ToList();
-
-             return leagueDTOs; // Return the list of LeagueDTOs
-         }
-
-         throw new HttpRequestException("Error fetching leagues from API");
-     } */
+        var errorContent = await response.Content.ReadAsStringAsync();
+        throw new HttpRequestException($"Error fetching leagues from API: {response.StatusCode} - {errorContent}");
+    }
 }
 
+// Wrapper class to match the structure of the API response
+public class ApiResponse<T>
+{
+    public T Data { get; set; }
+}
