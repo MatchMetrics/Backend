@@ -49,7 +49,7 @@ app.MapGet("/weatherforecast", () =>
 app.MapGet("/livescores", (IOptions<ApiSettings> apiSettings) =>
 {
     var apiKey = apiSettings.Value.ApiKey;
-    var baseUrl = apiSettings.Value.BaseUrl;
+    var baseUrl = apiSettings.Value.ApiBaseUrl;
 
     return Results.Ok(new
     {

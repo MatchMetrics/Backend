@@ -15,7 +15,7 @@ public class LeagueService
     // Fetch all leagues and return them as LeagueDTOs
     public async Task<List<LeagueDTO>> GetAllLeagues()
     {
-        var requestUrl = $"{_apiSettings.BaseUrl}/leagues?apiKey={_apiSettings.ApiKey}";
+        var requestUrl = $"{_apiSettings.ApiBaseUrl}{_apiSettings.ApiLeague}{_apiSettings.ApiKey}";
 
         var response = await _httpClient.GetAsync(requestUrl);
         if (response.IsSuccessStatusCode)
