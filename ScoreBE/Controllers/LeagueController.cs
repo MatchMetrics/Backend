@@ -1,10 +1,9 @@
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("placeholder")]
+[Route("api/[controller]")]
 public class LeagueController : ControllerBase
-{/* 
+{
     private readonly LeagueService _leagueService;
 
     public LeagueController(LeagueService leagueService)
@@ -12,10 +11,17 @@ public class LeagueController : ControllerBase
         _leagueService = leagueService;
     }
 
-    [HttpGet]
+    [HttpGet("leagues")]
     public async Task<IActionResult> GetLeagues()
     {
-        var leagues = await _leagueService.GetAllLeagues();
-        return Ok(leagues);
-    } */
+        try
+        {
+            var leagues = await _leagueService.GetAllLeagues();
+            return Ok(leagues);
+        }
+        catch (HttpRequestException ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+        }
+    }
 }
