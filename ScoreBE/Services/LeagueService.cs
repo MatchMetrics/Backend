@@ -21,7 +21,7 @@ public class LeagueService
         if (response.IsSuccessStatusCode)
         {
             // Deserialize the JSON response into a wrapper object that includes "data"
-            var responseData = await response.Content.ReadFromJsonAsync<ApiResponse<List<LeagueDTO>>>();
+            var responseData = await response.Content.ReadFromJsonAsync<ApiLeagueResponse<List<LeagueDTO>>>();
 
             // Map only the Id and Name from the API response
             return responseData?.Data.Select(league => new LeagueDTO
@@ -37,7 +37,7 @@ public class LeagueService
 }
 
 // Wrapper class to match the structure of the API response
-public class ApiResponse<T>
+public class ApiLeagueResponse<T>
 {
     public T Data { get; set; }
 }
