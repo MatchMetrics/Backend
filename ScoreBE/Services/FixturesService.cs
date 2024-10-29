@@ -30,7 +30,7 @@ public class FixtureService
                 Length = fixture.Length,
                 StartTimeStamp = fixture.StartTimeStamp,
                 LeagueId = fixture.LeagueId,
-                
+
             }).ToList() ?? new List<LatestFixturesDTO>();
         }
 
